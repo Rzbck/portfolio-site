@@ -22,7 +22,16 @@ git commit -m "$commit_message"
 git push origin main
 
 # Déployer sur Netlify
-netlify deploy --prod
+$deploy_output = netlify deploy --prod
 
-# Afficher un message de succès
-Write-Output "✅ Deployment complete! Your site is live."
+# Extraire l'URL du site depuis la sortie de Netlify
+if ($deploy_output -match "Website URL:\s+(https?://\S+)") {
+    $website_url = $matches[1]
+    Write-Output "✅ Deployment complete! Your site is live at: $website_url"
+
+    # Ouvrir le site dans le navigateur par défaut
+    Start-Process $website_url
+} else {
+    Write-Output "⚠️ Deployment complete, but failed to extract the website URL."
+}
+
