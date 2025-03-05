@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlélie Chauvel - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Charlélie Chauvel</h1>
+        <p>Merging Art, Technology & Real-Time Interactivity</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>With 18+ years of experience, I specialize in interactive scenography, audiovisual design & emerging technologies.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Lighting & Video Mapping (DMX, Artnet, LED Mapping, Video Mapping)</li>
+            <li>TouchDesigner, Resolume, Millumin, Smode, VJing</li>
+            <li>Python, GLSL, API REST, Git</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Let's collaborate! Reach me at <a href="mailto:contact@charleliechauvel.com">contact@charleliechauvel.com</a></p>
+        <p>Follow me on:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Charlélie Chauvel</p>
+    </footer>
+
+    <script>
+        gsap.from("header", {duration: 1, y: -50, opacity: 0, ease: "power2.out"});
+        gsap.from("section", {duration: 1, opacity: 0, stagger: 0.3, ease: "power2.out"});
+    </script>
+</body>
+</html>
